@@ -12,12 +12,6 @@ function App() {
     setTitle(e.target.value);
   };
 
-  // const handleLinkBubbling = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  //   console.log(e.target.tagName !== e.currentTarget.tagName);
-  //   if (e.target.tagName !== e.currentTarget.tagName) return false;
-  //   return true;
-  // };
-
   const handleDeckSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -39,7 +33,6 @@ function App() {
       } catch {
         console.log("Error deleting deck");
       }
-      e.stopPropagation();
     };
   };
 
@@ -75,7 +68,7 @@ function App() {
           >
             <button
               className="close-btn"
-              onClick={(e) => e.nativeEvent.stopImmediatePropagation()}
+              onClick={handleDeleteDeck(deck._id)}
             >
               +
             </button>

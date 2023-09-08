@@ -1,0 +1,6 @@
+POST http://localhost:5000/decks/64f22bac1423343526af3bdc/cards
+Content-Type: application/json 
+
+{
+  "text": "photoelectric effect"
+}

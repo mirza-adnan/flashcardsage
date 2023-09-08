@@ -1,0 +1,1 @@
+DELETE http://localhost:5000/decks/64f22ba61423343526af3bd8
